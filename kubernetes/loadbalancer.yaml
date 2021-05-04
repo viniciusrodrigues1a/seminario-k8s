@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aplicacao-web-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      name: http-svc
+      port: 3333
+  selector:
+    app: servidor

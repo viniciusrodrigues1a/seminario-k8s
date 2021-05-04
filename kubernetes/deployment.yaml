@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aplicacao-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: servidor
+  template:
+    metadata:
+      labels:
+        app: servidor
+    spec:
+      containers:
+        - name: aplicacao-web
+          image: viniciusdocker33/seminario-k8s-node:latest
+          ports:
+            - containerPort: 3333
