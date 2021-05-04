@@ -30,7 +30,7 @@ minikube start
 
 Criando o componentes Kubernetes.
 ```sh
-kubectl apply -f kubernetes/deployment.yaml
+kubectl apply -f kubernetes/deployment.yaml && \
 kubectl apply -f kubernetes/loadbalancer.yaml
 ```
 
